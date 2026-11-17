@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#183c36" />
+  <title>Verbana — The Verb Garden</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="Verbana home"><span class="brand-mark">✳</span><span>verbana<small>THE VERB GARDEN</small></span></a>
+      <div class="side-label">YOUR JOURNEY</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-view="home"><span>⌂</span> Garden <i></i></button>
+        <button class="nav-link" data-view="learn"><span>▤</span> Flashcards <i></i></button>
+        <button class="nav-link" data-view="play"><span>✦</span> Play modes <i></i></button>
+        <button class="nav-link" data-view="shop"><span>♧</span> Little shop <i></i></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="daily-card"><div class="daily-sun">☼</div><div><b>A little each day</b><p>Five minutes is a lovely start.</p></div></div>
+        <button class="profile-button" id="profileButton"><span class="avatar-mini" id="avatarMini">🧑‍🎨</span><span><b id="playerName">Garden learner</b><small>Level <span id="levelSmall">1</span> learner</small></span><span class="dots">···</span></button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar"><div class="mobile-brand"><span class="brand-mark">✳</span> verbana</div><div class="breadcrumb" id="breadcrumb">YOUR GARDEN <span>／</span> TODAY</div><div class="top-actions"><button class="icon-button" id="soundButton" aria-label="Toggle sound">♫</button><div class="coin-pill"><span>✦</span><b id="coinCount">0</b><small>petals</small></div></div></header>
+      <div class="content" id="viewRoot"></div>
+      <footer>GROW YOUR WORDS, ONE VERB AT A TIME <span>✳</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
